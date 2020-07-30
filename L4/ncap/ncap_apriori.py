@@ -18,8 +18,10 @@ print(df)
 df.to_csv('temp.csv')
 from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
+# 挖掘数据项集
 frequent_itemsets = apriori(df, min_support=0.02, use_colnames=True)
 rules = association_rules(frequent_itemsets, metric="lift", min_threshold=0.5)
+# 按照支持度从大到小进行排序
 frequent_itemsets = frequent_itemsets.sort_values(by="support" , ascending=False) 
 print("频繁项集：", frequent_itemsets)
 # 显示全部的列
