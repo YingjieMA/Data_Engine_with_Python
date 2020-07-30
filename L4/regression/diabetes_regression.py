@@ -17,12 +17,14 @@ data = diabetes.data
 print(data.shape)
 print(data[0])
 
+# train_test_split 做数据集切分
 # 训练集 70%，测试集30%
 train_x, test_x, train_y, test_y = train_test_split(diabetes.data, diabetes.target, test_size=0.3, random_state=14)
 print(len(train_x))
 
 #回归训练及预测
 clf = linear_model.LinearRegression()
+# x是个特征 y血糖值
 clf.fit(train_x, train_y)
 
 print(clf.coef_)
