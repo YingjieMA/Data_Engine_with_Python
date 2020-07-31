@@ -87,4 +87,5 @@ def show_tree(clf):
 	graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 	graph.write_pdf("titanic_tree.pdf")
 
+# 把clf分类器进行决策树的可视化
 show_tree(clf)
