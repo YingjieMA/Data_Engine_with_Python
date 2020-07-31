@@ -88,8 +88,10 @@ def thermodynamic():
 	plt.show()
 
 # 蜘蛛图
+# 五封装接口 需要自己画
 def spider_chart():
 	# 数据准备
+	# u"字符串" 统一改为unicode编码
 	labels=np.array([u"推进","KDA",u"生存",u"团战",u"发育",u"输出"])
 	stats=[76, 58, 67, 97, 86, 58]
 	# 画图数据准备，角度、状态值
@@ -106,7 +108,7 @@ def spider_chart():
 	ax.set_thetagrids(angles * 180/np.pi, labels, FontProperties=font)
 	plt.show()
 
-# 二元变量分布图
+# 二元变量分布图 3种图
 def jointplot():
 	# 数据准备
 	flights = sns.load_dataset("flights")
