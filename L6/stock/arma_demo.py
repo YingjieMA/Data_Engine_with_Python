@@ -21,6 +21,7 @@ data.index = pd.Index(data_index)
 data.plot(figsize=(12,8))
 plt.show()
 # 创建ARMA模型# 创建ARMA模型
+# 人工指定p=7, 1=0
 arma = ARMA(data,(7,0)).fit()
 print('AIC: %0.4lf' %arma.aic)
 # 模型预测
